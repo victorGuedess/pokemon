@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header div{
+    /* alinhar ao meio */
+    margin: auto;
+    margin-top: 20px;
+    width: 120px;
+
+    /* borda de 4px, sobrando 116px para a imagem */
+    padding: 4px;
+    background-image: url("https://media0.giphy.com/media/OTdzZ6euPNltVOiJ0w/200w.webp?cid=ecf05e47b95b9hrru6ti1n39hzbueipoapiqobtsewznj05y&rid=200w.webp&ct=g");
+    border-radius: 10%;
+
+    /* organizar borda na imagem */
+    display: flex;
+    
+    transition: transform .3s;
+}
+
+header div:hover{
+    transform: scale(1.2);
+}
+
+header div img{
+    /* está usando 100% da div que tem tamanho 120px */
+    width: 100%;
+    border-radius: 10%;
+}
+
+body{
+    background-image: url("https://i.pinimg.com/originals/ce/2c/70/ce2c705a5cec179fb1ea249ef7e784b4.gif");
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #160805;
+    line-height: 160%;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 160%;
+}
+
+main{
+    max-width: 580px;
+    width: 90%;
+    margin: auto;
+
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    display: grid;
+    gap: 24px;
+}
+
+section{
+    color: #160805;
+    background-image: linear-gradient(90deg, black 0%, gray 50%, white 100%);
+    border-radius: 10px;
+    padding-top: 4px;
+}
+
+section h2{
+    font-weight: 900;
+    font-size: 24px;
+}
+
+section p{
+    font-weight: 400px;
+    font-size: 16px;
+    letter-spacing: -0.18px;
+}
+
+section div{
+    background-color: #fff7e2;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+ul{
+    list-style: none;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul img{
+    width: 75px;
+    height: 75px;
+}
+
+li a{
+    text-decoration: none;
+}
+
+li{
+    margin: auto;
+    margin-top: 20px;
+}
+
+section ul li:hover{
+    transform: scale(1.2);
+}
+
+section ul li{
+    transition: transform .3s;
+}
+
+/* animação */
+
+header{
+    animation: fromTop .8s backwards;
+    animation-delay: 0.3s;
+}
+
+section{
+    animation: fromBottom .7s backwards;
+}
+
+section:nth-child(1){
+    animation-delay: 0;
+}
+
+section:nth-child(2){
+    animation-delay: .4s;
+}
+
+section:nth-child(3){
+    animation-delay: .8s;
+}
+
+@keyframes fromTop{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
